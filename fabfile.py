@@ -6,8 +6,11 @@ from fabric.api import task
 @task
 def provisionServer():
     sudo('curl -L https://www.chef.io/chef/install.sh | sudo bash')
-    run('mkdir -p cookbooks')
-    put('trapache', 'cookbooks')
+    
+	run('rm -rf cookbooks/')
+	run('mkdir -p cookbooks')
+    
+	put('trapache', 'cookbooks')
     run('ls -lah cookbooks')
 	
     run('rm -rf cookbooks.tar.gz')
