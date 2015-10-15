@@ -17,7 +17,7 @@ def provisionServer():
     run('tar cvzpf cookbooks.tar.gz cookbooks/')
     #put es como scp
     put('runlist.json', 'runlist.json')
-	put('client.rb', 'client.rb')
+    put('client.rb', 'client.rb')
 	
     #sudo('chef-solo -j runlist.json -r cookbooks.tar.gz')
     sudo('chef-client --config client.rb -j runlist.json')
