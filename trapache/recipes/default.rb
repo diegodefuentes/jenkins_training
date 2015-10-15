@@ -15,7 +15,7 @@ service 'apache2' do
   action [:enable, :start]
 end
 
-template '/var/www/index2.html' do
+template '/var/www/html/index2.html' do
   source 'index2.html.erb'
   action :create
 end
