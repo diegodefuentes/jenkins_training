@@ -6,4 +6,4 @@ from fabric.api import task
 @task
 def provisionServer():
     sudo('apt-get install apache2')
-	sudo('service apache2 restart')
+    sudo('service apache2 restart')
