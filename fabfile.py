@@ -10,4 +10,4 @@ def provisionServer():
 
 @task
 def deployIndex():
-    put('index.html', '/var/www/html/index.html')
+    put('index.html', '/var/www/html/index.html', use_sudo=True)
