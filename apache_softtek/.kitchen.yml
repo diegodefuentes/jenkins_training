@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-6.6
+    driver_config:
+     network:
+      - ['private_network', {ip: '172.16.1.5'}]
+
+suites:
+  - name: Apache
+    run_list:
+      - recipe[apache_softtek::default]
+    attributes:

@@ -1,0 +1,13 @@
+
+<Directory <%= node['apache']['RootDirectory'] %>>
+   AllowOverride <%= node['apache']['OptionAllowOverride'] %>
+   Order <%= node['apache']['Order'] %>
+   Deny <%= node['apache']['Deny'] %>
+</Directory>
+
+
+ServerTokens <%= node['apache']['ServerTokens'] %>
+
+ServerSignature <%= node['apache']['ServerSignature'] %>
+
+TraceEnable Off

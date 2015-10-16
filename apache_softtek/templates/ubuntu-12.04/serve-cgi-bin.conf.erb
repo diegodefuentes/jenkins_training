@@ -1,0 +1,9 @@
+
+		ScriptAlias /cgi-bin/ <%= node['apache']['ScriptsDirectory'] %>
+		<Directory "<%= node['apache']['ScriptsDirectory'] %>">
+			AllowOverride <%= node['apache']['OptionAllowOverride'] %>
+			Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+			Require all granted
+		</Directory>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet

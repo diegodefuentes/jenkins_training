@@ -1,0 +1,9 @@
+DEPENDENCIES
+  apache_softtek
+    path: .
+    metadata: true
+
+GRAPH
+  apache_softtek (0.1.3)
+    iptables (~> 1.0.0)
+  iptables (1.0.0)
